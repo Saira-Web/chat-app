@@ -1,3 +1,23 @@
 body {
-	background-color: grey;
+	background-color: rgb(179, 171, 171);
+}
+
+h1{
+	color: rgb(12, 15, 216);
+	text-align: center;
+	font-size: 3em;
+}
+
+.chatBox{
+	text-align: center;
+	width: 800px;
+	height: 500px;
+	background-color: rgb(134, 210, 233);
+	border: solid 6px rgb(12, 15, 216);
+    margin-left:30em;
+
+}
+
+button{
+	font-size: 1em;
 }

@@ -9,17 +9,29 @@
 		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
-		<h1>Hello World</h1>
+		<h1>Welcome to our Chatroom</h1>
+
+		
+
+		<!-- user name button and box  -->
+		<div class="userName">
+		<form id="userName">
+			<input type="text" placeholder="Join Chat">
+			<button type="submit">Enter Your Name</button>
+		</form>
+		</div>
 
 		<!-- Form: Input field, send button, 
 				 Messages: ordered list -->
+		<div class="chatBox">
 		<form id="sendMsg">
-			<input type="text" id="txt">
+			<input type="text" id="txt" placeholder="Type your Message">
 			<button type="submit">Send</button>
 		</form>
+		</div>
 
 		<ol id="messages"></ol>
-
+	
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="js/index.js"></script>
 	</body>
