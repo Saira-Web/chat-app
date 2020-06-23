@@ -11,12 +11,10 @@
 	<body>
 		<h1>Welcome to our Chatroom</h1>
 
-		
-
 		<!-- user name button and box  -->
 		<div class="userName">
 		<form id="userName">
-			<input type="text" placeholder="Join Chat">
+			<input type="text" placeholder="Join Chat" id="user">
 			<button id="nameBtn"type="submit">Enter Your Name</button>
 		</form>
 		</div>
@@ -24,6 +22,7 @@
 		<!-- Form: Input field, send button, 
 				 Messages: ordered list -->
 		<div class="chatBox">
+			<h3 id="chatName"></h3>
 		<form id="sendMsg">
 			<input type="text" id="txt" placeholder="Type your Message">
 			<button type="submit">Send</button>

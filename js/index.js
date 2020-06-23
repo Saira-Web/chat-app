@@ -18,9 +18,22 @@ socket.on('newuser', (data) => console.log(`${data.user} has connected!`))
 const $msgForm = document.getElementById('sendMsg')
 const $msgList = document.getElementById('messages')
 const $userName = document.getElementById('userName') // to get message input
+const $chatName = document.getElementById("chatName")
 var newUser
 
+$userName.addEventListener('submit', (event)=>{
+	event.preventDefault()
+	newUser=event.currentTarget.user.value;
+	console.log(newUser)
 
+	socket.emit('username', {name: event.currentTarget.user.value})
+}
+)
+
+socket.on('username', (data) =>{
+	console.log(`By : ${data.name}`)
+	$chatName.innerHTML = `By : ${data.name}`
+})
 
 $msgForm.addEventListener('submit', (event) => {
 	event.preventDefault()
