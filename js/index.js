@@ -21,12 +21,12 @@ const $userName = document.getElementById('userName') // to get message input
 const $chatName = document.getElementById("chatName")
 var newUser
 
-$userName.addEventListener('submit', (event)=>{
-	event.preventDefault()
+$userName.addEventListener('submit',(event)=>{
+	event.preventDefault();
 	newUser=event.currentTarget.user.value;
 	console.log(newUser)
 
-	socket.emit('username', {name: event.currentTarget.user.value})
+	socket.emit('username', { name: event.currentTarget.user.value})
 }
 )
 
