@@ -14,22 +14,25 @@
 		<!-- user name button and box  -->
 		<div class="userName">
 		<form id="userName">
-			<input type="text" placeholder="Join Chat" id="user">
-			<button id="nameBtn"type="submit">Enter Your Name</button>
+			<input type="text" placeholder="Enter your Name" id="user">
+			<button id="nameBtn" type="submit">Join Chat</button>
 		</form>
 		</div>
 
 		<!-- Form: Input field, send button, 
 				 Messages: ordered list -->
-		<div class="chatBox">
+		<div class="chatContainer">
 			<h3 id="chatName"></h3>
+		</div>
+		<div class="messageBox">	
 		<form id="sendMsg">
-			<input type="text" id="txt" placeholder="Type your Message">
-			<button type="submit">Send</button>
+			<input type="text" id="messageInput" placeholder="Type your Message">
+			<button type="submit" id="sendBtn">Send</button>
 		</form>
 		</div>
 
-		<ol id="messages"></ol>
+		<!-- ordered list with an id of messages, each message will be A LIST ITEM -->
+		<ol id="messages"></ol> 
 	
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="js/index.js"></script>
