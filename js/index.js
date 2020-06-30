@@ -53,7 +53,7 @@ $msgForm.addEventListener('submit', (event) => {
 
 socket.on('chatmsg', (data)=> {
 	console.log('${data.user} : ${data.msg}')
-	const newMessage = document.createElement('ol')
+	const newMessage = document.createElement('p')
 	$msgList.appendChild(newMessage)
 	newMessage.textContent=data.msg
 	
