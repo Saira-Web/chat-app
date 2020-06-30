@@ -19,9 +19,9 @@ io.on('connection', function (socket) {
   })
 	
   // Listen for a "newuser" message
-  socket.on('newuser', (data) => {
+  socket.on('chatmsg', (data) => {
     // Transmit a message to everyone except the sender
-      socket.broadcast.emit('newuser', data)
+      socket.broadcast.emit('chatmsg', data)
 
     // The same message, sent to all users - try it!
     //io.emit('newuser', data)
@@ -30,8 +30,8 @@ io.on('connection', function (socket) {
 	
 	// Listen for "chatmsg"
 	//   io.emit to all user
-	socket.on('chatmsg', (data) => {
-		io.emit('chatmsg', data)
+	socket.on('message', (data) => {
+		io.emit('message', data)
 	})
 
 })
