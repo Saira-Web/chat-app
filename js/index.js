@@ -43,14 +43,19 @@ socket.on('username', (data) =>{
 // +++++ Event listener for incoming message +++++
 $msgForm.addEventListener('submit', (event) => {
 	event.preventDefault()
-	const message = messageInput.value    // get the value from the message     
-	socket.emit('send-chat-message', message)   // send info from client to server
-	messageInput.value = ''      // empty out message each time we sent it
-
-
-
-	socket.emit('chatmsg', {msg: event.currentTarget.txt.value})
+	 // get the value from the message     
+ 	// send info from client to server
+	socket.emit('chatmsg', {msg: event.currentTarget.txt.value
+	})
+     // empty out message each time we sent it
 	event.currentTarget.txt.value = ''
-});
+})
 
+socket.on('chatmsg', (data)=> {
+	console.log('${data.user} : ${data.msg}')
+	const newMessage = document.createElement('ol')
+	$msgList.appendChild(newMessage)
+	newMessage.textContent=data.msg
+	
+})
 // +++++ Incoming MESSAGE functionality ends here +++++
